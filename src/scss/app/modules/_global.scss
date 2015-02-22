@@ -32,14 +32,21 @@ $banner-height: 350px;
 $site-menu-width-control: 101px;
 $menu-list-icons-width: 35px;
 	// Header
-$header-height-control: 70px;
+$header-height-control: 112px;
 	// Mobile header
 $mobile-navbar-height: 56px;
 	// Hero Unit and Videocover
-$video-bg-height: 491px;
+$video-bg-height: 490px;
 	// User cards
 $user-card-height: 42px;
 $user-card-width: 70px;
+	// Separators
+$separator-width: 42px;
+$separator-height: 3px;
+	// Flickity height control
+$gallery-cell-height: 700px;
+	// Footer
+$footer-height-control: 70px;
 
 .site-wrapper,
 .site-content {
@@ -61,9 +68,49 @@ $user-card-width: 70px;
 		@include position(absolute, 0 0 0 0);
 		height: $video-bg-height;
 	}
+	&.full-height {
+		height: 100%;
+		.overlay {
+			height: 100%;
+		}
+	}
 }
 
 // CLICKABLE DIV
 [data-href]{
 	cursor: pointer;
 }
+
+// SEPARATORS
+.separator {
+	width: $separator-width;
+	height: $separator-height;
+	margin: $container-fluid auto;
+	&.left {
+		margin: 0;
+	}
+	&.right {
+		margin: 0 0 0 auto;
+	}
+}
+
+// FLICKITY
+.js-flickity {
+	.gallery-cell {
+		height: $gallery-cell-height;
+		width: 49%;
+		@media #{$sm-down} {
+			width: 100%; 
+		}
+		// @include clearfix;
+		// img {
+		// 	width: 100%;
+		// 	height: auto;
+		// }
+		> div {
+			width: 100%;
+			height: $gallery-cell-height;			
+			@include bg-img-control-top;
+		}
+	}
+} 

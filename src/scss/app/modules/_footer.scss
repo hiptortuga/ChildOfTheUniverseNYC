@@ -1,0 +1,5 @@
+footer.footer {
+	height: $footer-height-control;
+	@include flex-middle;
+	background-color: white;
+}

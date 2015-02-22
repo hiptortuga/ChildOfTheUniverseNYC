@@ -2,9 +2,11 @@
   "name": "easyboxmodel",
   "version": "1.0.0",
   "dependencies": {
-    "modernizr": "~2.6.2",
-    "jquery": "^2.1.3",
-    "respond": "^1.4.2",
-    "html5shiv": "^3.7.2"
+    "modernizr": "latest",
+    "jquery": "latest",
+    "respond": "latest",
+    "html5shiv": "latest",
+    "angular": "latest",
+    "angular-mailchimp": "latest"
   }
 }

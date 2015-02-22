@@ -87,6 +87,11 @@ $text-elements-list:
   "ol",
   "li";
 
+#{$headings-list},
+#{$headings-class-list} {
+  @include light;
+}
+
 // LEAD TEXT ELEMENTS
 #{$text-elements-list} {
   &.lead {

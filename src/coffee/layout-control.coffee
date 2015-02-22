@@ -17,6 +17,13 @@ $(document).ready ->
 		)
 	
 	# TRANSFORM ICONS INITIALIZE
-	transformicons.add('.tcon')
+	# transformicons.add('.tcon')
+
+	# FLICKITY
+	# $('#collection-gallery').flickity({
+	# 	contain: true
+	# 	cellAlign: 'left'
+	# 	# wrapAround: true
+	# 	})
 
 	return # END ON READY

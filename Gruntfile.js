@@ -165,9 +165,15 @@ module.exports = function (grunt) {
             '<%= project.src %>/js/lib/TweenMax.min.js',
             '<%= project.src %>/js/lib/ScrollToPlugin.min.js',
             '<%= project.src %>/js/lib/jquery.scrollmagic.min.js',
-            '<%= project.src %>/js/lib/imagesloaded.pkgd.min.js',
-            '<%= project.src %>/js/lib/isotope.pkgd.min.js',
-            '<%= project.src %>/js/lib/transformicons.js',
+            // '<%= project.src %>/js/lib/imagesloaded.pkgd.min.js',
+            // '<%= project.src %>/js/lib/isotope.pkgd.min.js',
+            '<%= project.src %>/js/lib/flickity.pkgd.min.js',
+            // '<%= project.src %>/js/lib/transformicons.js',
+            '<%= project.src %>/js/lib/angular.min.js',
+            '<%= project.src %>/js/lib/angular-resource.min.js',
+            '<%= project.src %>/js/lib/angular-sanitize.min.js',
+            '<%= project.src %>/js/lib/angular.min.js',
+            '<%= project.src %>/js/lib/angular-mailchimp.js',
             '<%= project.src %>/js/lib/coffeeCompile.js'
           ]
         }
@@ -344,16 +350,16 @@ module.exports = function (grunt) {
    */
   grunt.registerTask('default', [
     'coffee:dev',
-    'sass:ebm',
+    // 'sass:ebm',
     'sass:dev',
-    'bower:dev',
+    // 'bower:dev',
     // 'autoprefixer:dev',
     // 'cssmin:dev',
     // 'jshint',
     // 'concat:dev',
     'connect:livereload',
     'uglify',
-    'open',
+    // 'open',
     'watch'
   ]);
 
