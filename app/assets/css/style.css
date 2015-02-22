@@ -3837,7 +3837,7 @@ body::-webkit-scrollbar {
 
 .js-flickity .gallery-cell {
   height: 700px;
-  width: 49%;
+  width: 50%;
 }
 @media only screen and (max-width: 768px) {
   .js-flickity .gallery-cell {
@@ -3850,6 +3850,9 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
 }
 
 /* PROJECT ESPECIFIC FONTS */

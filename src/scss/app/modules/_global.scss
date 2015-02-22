@@ -98,7 +98,7 @@ $footer-height-control: 70px;
 .js-flickity {
 	.gallery-cell {
 		height: $gallery-cell-height;
-		width: 49%;
+		width: 50%;
 		@media #{$sm-down} {
 			width: 100%; 
 		}
@@ -111,6 +111,7 @@ $footer-height-control: 70px;
 			width: 100%;
 			height: $gallery-cell-height;			
 			@include bg-img-control-top;
+			@include bg-img-control-center-x;
 		}
 	}
 } 

@@ -64,7 +64,8 @@ angular.module('mailchimp', ['ng', 'ngResource', 'ngSanitize'])
           }
           // MailChimp returns a success.
           else if (response.result === 'success') {
-            mailchimp.successMessage = response.msg;
+            document.location.replace('thanks.html');
+            // mailchimp.successMessage = response.msg;
           }
         },
 
