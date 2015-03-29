@@ -6,7 +6,7 @@ header,
 	@include flex-space-between;
 	@include normalize-text;
 	width: 100%;
-	padding: 0 $container-fluid;
+	padding: $container-fluid;
 	min-height: $header-height-control;
 	background-color: white;
 	.left,
@@ -25,10 +25,11 @@ header,
 
 	}
 	.logo {
-		width: 360px;
-		height: 50px;
+		width: 420px;
+  	height: 70px;
 		@include bg-img-control;
 		@include bg-img-control-center;
+		background-size: 100%;
 		margin: 0 auto;
 		display: block;
 	}
@@ -41,3 +42,73 @@ header,
 		}
 	}
 }
+
+.menu {
+	@include list-unstyled;
+	@include clearfix;
+	text-align: center;
+	text-transform: uppercase;
+	> li {
+		position: relative;
+		display: inline-block;
+		padding: $container-fluid $container-fluid 0 $container-fluid;
+		&:hover,
+		&.active {
+			ul {
+				display: block;
+			}
+		}
+		a {
+			&:hover,
+			&.active {
+			}
+		}
+	}
+	ul {
+		@include list-unstyled;
+		width: 100%;
+		background-color: white;
+		z-index: 30;
+	  text-align: left;
+	  min-width: -moz-max-content;
+		min-width: -webkit-max-content;
+		min-width: max-content;
+		display: none;
+		@include position(absolute, 100% null null 0);
+		li {
+			a {
+				display: block;				
+	  		padding: ($container-fluid / 2) $container-fluid;
+				&:hover,
+				&.active {
+
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

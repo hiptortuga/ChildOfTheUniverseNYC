@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="childoftheuniverse">
+<html>
   <head>
     <meta charset="utf-8">
     <title>Child of the Universe NYC | Clothing</title>
@@ -52,55 +52,13 @@
         <div class="right"></div>
       </header>
       <div class="site-content">
-        <div id="contact" class="minhp-100 pv-42 bg-blue-darker">
+        <div id="about" class="minhp-100 pv-42 ">
           <div class="container">
-            <div class="text-center normalize-text text-white mb-21">
-              <h2 class="uppercase">Wholesale</h2>
-              <p>Interested in showcasing our brand?<br><a href="https://sites.google.com/a/childoftheuniversenyc.com/newhomepage/home/wholesale/Lookbook%20-%20Child_ofthe_Universe_WebEmail.pdf" target="_blank" class="underline">Click here</a> to download our wholesale materials and please contact us through the form below to get the password</p>
+            <div class="text-center normalize-text mb-21">
+              <h2 class="uppercase">Stockist</h2>
               <div class="separator bg-white"></div>
+              <p>Coming soon</p>
             </div>
-          </div>
-          <div class="container-xs minh-560 flex-middle">
-            <form class="custom-form" name="MailchimpSubscriptionForm" ng-controller="MailchimpSubscriptionCtrl">
-              <input class="hidden" type="hidden" ng-model="mailchimp.username" ng-init="mailchimp.username='ChildUniverse'">
-              <input class="hidden" type="hidden" ng-model="mailchimp.dc" ng-init="mailchimp.dc='us10'">
-              <input class="hidden" type="hidden" ng-model="mailchimp.u" ng-init="mailchimp.u='c56ccbc5d262bfd42b844503d'">
-              <input class="hidden" type="hidden" ng-model="mailchimp.id" ng-init="mailchimp.id='ce43add0aa'">
-              <div class="row">
-                <div class="col-sm-6 form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" ng-model="mailchimp.FNAME" required>
-                </div>
-                <div class="col-sm-6 form-group">
-                  <label for="lastname">Lastname</label>
-                  <input type="text" class="form-control" ng-model="mailchimp.LNAME" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" ng-model="mailchimp.EMAIL" required>
-              </div>
-              <div class="row">
-                <div class="col-sm-6 form-group">
-                  <label for="company">Company</label>
-                  <input type="text" class="form-control" ng-model="mailchimp.COMPANY" required>
-                </div>
-                <div class="col-sm-6 form-group">
-                  <label for="Phone">Phone</label>
-                  <input type="text" class="form-control" ng-model="mailchimp.PHONE" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="primary-interest">Primary interest</label>
-                <textarea rows="3" class="form-control" ng-model="mailchimp.PRIMARYINT" required></textarea>
-              </div>
-              <div class="form-group text-white" ng-show="mailchimp.result === 'error'" ng-cloak>
-                <span ng-bind-html="mailchimp.errorMessage"></span>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-outline btn-white uppercase" ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)">Send</button>
-              </div>
-            </form>
           </div>
         </div>
         <div id="footer" class="normalize-text bg-white">

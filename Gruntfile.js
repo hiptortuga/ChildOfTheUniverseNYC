@@ -168,6 +168,7 @@ module.exports = function (grunt) {
             // '<%= project.src %>/js/lib/imagesloaded.pkgd.min.js',
             // '<%= project.src %>/js/lib/isotope.pkgd.min.js',
             '<%= project.src %>/js/lib/flickity.pkgd.min.js',
+            '<%= project.src %>/js/lib/jquery.magnific-popup.js',
             // '<%= project.src %>/js/lib/transformicons.js',
             '<%= project.src %>/js/lib/angular.min.js',
             '<%= project.src %>/js/lib/angular-resource.min.js',
@@ -351,7 +352,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'coffee:dev',
     // 'sass:ebm',
-    'sass:dev',
+    // 'sass:dev',
     // 'bower:dev',
     // 'autoprefixer:dev',
     // 'cssmin:dev',

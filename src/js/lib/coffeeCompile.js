@@ -9,6 +9,7 @@
 (function() {
   'use-strict';
   $(document).ready(function() {
+    var $gallery;
     $('.disable-anchors a').click(function(e) {
       e.preventDefault();
     });
@@ -21,6 +22,12 @@
       pathObj[mainPath] = lastPath;
       window.history.pushState(pathObj, '', lastPath);
       document.location.replace($(this).data('href'));
+    });
+    $gallery = $('.gallery');
+    $gallery.flickity({
+      cellAlign: true,
+      contain: true,
+      pageDots: false
     });
   });
 

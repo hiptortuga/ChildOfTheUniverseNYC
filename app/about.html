@@ -28,13 +28,26 @@
         <div class="left"></div>
         <div class="center">
           <a href="index.html" class="logo" style="background-image: url(assets/img/logo_ChildOfTheUniverseNYC.png)"></a>
-          <nav>
-            <a href="index.html#collection">Collection</a>
-            <a href="about.html">About</a>
-            <a href="index.html#contact">Contact</a>
-            <a href="index.html#stockist">Stockist</a>
-            <a href="wholesale.html">Wholesale</a>
-          </nav>
+          <ul class="menu">
+            <li>
+              <a href="collections.html">Collections</a>
+              <ul>
+                <li><a href="collections.html">Fall/Winter 2015</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="#footer">Contact</a>
+            </li>
+            <li>
+              <a href="stockist.html">Stockist</a>
+            </li>
+            <li>
+              <a href="wholesale.html">Wholesale</a>
+            </li>
+          </ul>
         </div>
         <div class="right"></div>
       </header>
@@ -47,11 +60,54 @@
             </div>
           </div>
         </div>
-        <footer class="footer">
-          <div class="container-fluid text-center normalize-text">
-            <h5 class="text-gray">Child of the Universe NYC | 2015</h5>
+        <div id="footer" class="normalize-text bg-white">
+          <div class="container">
+            <div class="row flex-space-between">
+              <div class="left col-sm-8 minh-140 flex-middle">
+                <p>Subscribe to newsletter:</p>
+                <form class="form-inline" name="MailchimpSubscriptionForm" ng-controller="MailchimpSubscriptionCtrl">
+                  <input class="hidden" type="hidden" ng-model="mailchimp.username" ng-init="mailchimp.username='ChildUniverse'">
+                  <input class="hidden" type="hidden" ng-model="mailchimp.dc" ng-init="mailchimp.dc='us10'">
+                  <input class="hidden" type="hidden" ng-model="mailchimp.u" ng-init="mailchimp.u='c56ccbc5d262bfd42b844503d'">
+                  <input class="hidden" type="hidden" ng-model="mailchimp.id" ng-init="mailchimp.id='a83081fc9f'">
+                  <div class="form-group">
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" class="form-control" ng-model="mailchimp.FNAME" required placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" class="form-control" ng-model="mailchimp.EMAIL" required placeholder="Email">
+                  </div>
+                  <div class="form-group text-white" ng-show="mailchimp.result === 'error'" ng-cloak>
+                    <span ng-bind-html="mailchimp.errorMessage"></span>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-outline btn-gray-dark uppercase" ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+              <div class="right col-sm-4 minh-140 flex-middle">
+                <nav class="text-right ml-ch-14">
+                  <a href="#" class="flaticon-facebook48"> Facebook</a>
+                  <a href="#" class="flaticon-pinterest29"> Pinterest</a>
+                  <a href="#" class="flaticon-instagram15"> Instagram</a>
+                </nav>
+              </div>
+            </div>
           </div>
-        </footer>
+          <div class="bg-gray-darker">
+            <div class="container text-white pv-14">
+              <div class="row flex-space-between">
+                <nav class="col-sm-6">
+                  <a href="#">Contact us</a>
+                </nav>
+                <nav class="col-sm-6 text-right">
+                  <span>&copy; Child of the Universe NYC</span>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- APP SCRIPTS -->

@@ -145,7 +145,7 @@ $body-bg:               $gray-lighter !default;
 $text-color:            $gray-dark !default;
 
 //** Global textual link color.
-$link-color:            $blue-dark !default;
+$link-color:            $gray-dark !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
@@ -299,7 +299,7 @@ $input-bg:                       #fff !default;
 $input-bg-disabled:              $gray-lighter !default;
 
 //** Text color for `<input>`s
-$input-color:                    $gray-lighter !default;
+$input-color:                    $gray !default;
 //** `<input>` border color
 $input-border:                   $gray-lighter !default;
 

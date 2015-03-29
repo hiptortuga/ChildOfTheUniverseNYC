@@ -7,6 +7,7 @@
     "respond": "latest",
     "html5shiv": "latest",
     "angular": "latest",
-    "angular-mailchimp": "latest"
+    "angular-mailchimp": "latest",
+    "magnific-popup": "latest"
   }
 }

@@ -28,13 +28,26 @@
         <div class="left"></div>
         <div class="center">
           <a href="index.html" class="logo" style="background-image: url(assets/img/logo_ChildOfTheUniverseNYC.png)"></a>
-          <nav>
-            <a href="#collection">Collection</a>
-            <a href="about.html">About</a>
-            <a href="#contact">Contact</a>
-            <a href="#stockist">Stockist</a>
-            <a href="wholesale.html">Wholesale</a>
-          </nav>
+          <ul class="menu">
+            <li>
+              <a href="collections.html">Collections</a>
+              <ul>
+                <li><a href="collections.html">Fall/Winter 2015</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="#footer">Contact</a>
+            </li>
+            <li>
+              <a href="stockist.html">Stockist</a>
+            </li>
+            <li>
+              <a href="wholesale.html">Wholesale</a>
+            </li>
+          </ul>
         </div>
         <div class="right"></div>
       </header>
@@ -44,152 +57,60 @@
             <h1 class="uppercase lead">Tagline text centered</h1>
             <div class="separator bg-white"></div>
             <div class="pv-21">
-              <a href="#collection" class="btn btn-outline btn-lg btn-gray-lighter">See our collection</a>
+              <a href="collections.html" class="btn btn-outline btn-lg btn-gray-lighter">See our collections</a>
             </div>
           </div>
         </div>
       </div>
       <div class="site-content">
-        <div id="collection" class="minhp-100 pv-42 ">
+        <div id="footer" class="normalize-text bg-white">
           <div class="container">
-            <div class="text-center normalize-text mb-21">
-              <h2 class="uppercase">Collection</h2>
-              <div class="separator bg-white"></div>
+            <div class="row flex-space-between">
+              <div class="left col-sm-8 minh-140 flex-middle">
+                <p>Subscribe to newsletter:</p>
+                <form class="form-inline" name="MailchimpSubscriptionForm" ng-controller="MailchimpSubscriptionCtrl">
+                  <input class="hidden" type="hidden" ng-model="mailchimp.username" ng-init="mailchimp.username='ChildUniverse'">
+                  <input class="hidden" type="hidden" ng-model="mailchimp.dc" ng-init="mailchimp.dc='us10'">
+                  <input class="hidden" type="hidden" ng-model="mailchimp.u" ng-init="mailchimp.u='c56ccbc5d262bfd42b844503d'">
+                  <input class="hidden" type="hidden" ng-model="mailchimp.id" ng-init="mailchimp.id='a83081fc9f'">
+                  <div class="form-group">
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" class="form-control" ng-model="mailchimp.FNAME" required placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" class="form-control" ng-model="mailchimp.EMAIL" required placeholder="Email">
+                  </div>
+                  <div class="form-group text-white" ng-show="mailchimp.result === 'error'" ng-cloak>
+                    <span ng-bind-html="mailchimp.errorMessage"></span>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-outline btn-gray-dark uppercase" ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+              <div class="right col-sm-4 minh-140 flex-middle">
+                <nav class="text-right ml-ch-14">
+                  <a href="#" class="flaticon-facebook48"> Facebook</a>
+                  <a href="#" class="flaticon-pinterest29"> Pinterest</a>
+                  <a href="#" class="flaticon-instagram15"> Instagram</a>
+                </nav>
+              </div>
             </div>
-            <div id="collection-gallery" class="gallery js-flickity" 
-                data-flickity-options='{ "cellAlign": "left", "contain": true, "wrapAround": true, "imagesLoaded": true, "pageDots": false }'>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-1.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-2.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-3.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-4.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-5.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-6.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-7.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-8.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-9.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-10.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-11.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-12.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-13.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-14.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-15.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-16.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-17.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-18.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-19.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-20.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-21.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-22.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-23.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-24.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-25.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-26.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-27.JPG)"></div>
-              </div>
-              <div class="gallery-cell">
-                <div style="background-image: url(assets/img/childoftheuniverse-28.JPG)"></div>
+          </div>
+          <div class="bg-gray-darker">
+            <div class="container text-white pv-14">
+              <div class="row flex-space-between">
+                <nav class="col-sm-6">
+                  <a href="#">Contact us</a>
+                </nav>
+                <nav class="col-sm-6 text-right">
+                  <span>&copy; Child of the Universe NYC</span>
+                </nav>
               </div>
             </div>
           </div>
         </div>
-        <div id="contact" class="minhp-50 pv-42 bg-blue-darker">
-          <div class="container">
-            <div class="text-center normalize-text text-white mb-21">
-              <h2 class="uppercase">SIGN UP</h2>
-              <p>Be the first to find out about our pre-sale and local events</p>
-              <div class="separator bg-white"></div>
-            </div>
-          </div>
-          <div class="container-xs minh-350 flex-middle">
-            <form name="MailchimpSubscriptionForm" ng-controller="MailchimpSubscriptionCtrl">
-              <input class="hidden" type="hidden" ng-model="mailchimp.username" ng-init="mailchimp.username='ChildUniverse'">
-              <input class="hidden" type="hidden" ng-model="mailchimp.dc" ng-init="mailchimp.dc='us10'">
-              <input class="hidden" type="hidden" ng-model="mailchimp.u" ng-init="mailchimp.u='c56ccbc5d262bfd42b844503d'">
-              <input class="hidden" type="hidden" ng-model="mailchimp.id" ng-init="mailchimp.id='a83081fc9f'">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" ng-model="mailchimp.FNAME" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" ng-model="mailchimp.EMAIL" required>
-              </div>
-              <div class="form-group text-white" ng-show="mailchimp.result === 'error'" ng-cloak>
-                <span ng-bind-html="mailchimp.errorMessage"></span>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-outline btn-white uppercase" ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)">Sign up</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div id="stockist" class="minhp-50 pv-42">
-          <div class="container">
-            <div class="text-center normalize-text mb-21">
-              <h2 class="uppercase">Stockist</h2>
-              <p>Coming soon</p>
-              <div class="separator bg-white"></div>
-            </div>
-          </div>
-        </div>
-        <footer class="footer">
-          <div class="container-fluid text-center normalize-text">
-            <h5 class="text-gray">Child of the Universe NYC | 2015</h5>
-          </div>
-        </footer>
       </div>
     </div>
     <!-- APP SCRIPTS -->

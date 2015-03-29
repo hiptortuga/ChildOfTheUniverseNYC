@@ -47,7 +47,7 @@ $input-type-list:
   }
 }
 
-form {
+form.custom-form {
 	label {
 		color: white;
 		text-transform: uppercase;
@@ -58,6 +58,7 @@ form {
 		input[type="#{nth($input-type-list, $i)}"] {
 			background-color: transparent;
 			border: 2px solid white;
+			color: white;
 		}
 	}
 	select {}
