@@ -4300,7 +4300,7 @@ body::-webkit-scrollbar {
 .separator {
   width: 42px;
   height: 3px;
-  margin: 14px auto;
+  margin: 14px auto 21px auto;
 }
 .separator.left {
   margin: 0;

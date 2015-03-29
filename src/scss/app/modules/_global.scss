@@ -83,7 +83,7 @@ $footer-height-control: 70px;
 .separator {
 	width: $separator-width;
 	height: $separator-height;
-	margin: $container-fluid auto;
+	margin: $container-fluid auto ($container-fluid + 7) auto;
 	&.left {
 		margin: 0;
 	}
